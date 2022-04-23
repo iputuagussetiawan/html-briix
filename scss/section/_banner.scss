@@ -1,0 +1,111 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+
+.banner{
+    @include imageRatio(594,565);
+    background-color: $primary;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    &__inner{
+        min-height: 450px;
+    }
+
+    &__btn-wrapper{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__image-container{
+        opacity: 0;
+    }
+
+    &__info-container{
+        margin-bottom: 50px;
+        opacity: 0;
+    }
+
+    &__title{
+        margin-bottom: 24px;
+        font-size: 48px;
+        font-family: $primary-font;
+        font-weight: 700;
+        line-height: 60px;
+        color: $secondary;
+    }
+
+    &__description{
+        font-size: 20px;
+        color: $third;
+        font-weight: 400;
+    }
+
+    &__supervised-container{
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 25.24px;
+        background-color: $white;
+        border-radius: 8px;
+      
+    }
+    &__supervised-image-container{
+        margin-left: 8px;
+    }
+
+    &__supervised-by{
+        margin: 0px;
+        font-size: 14px;
+        text-align: left;
+        color:$black-200;
+    }
+
+    &__btn-app{
+        display: inline-block;
+        margin-right: 14px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__title{
+            font-size: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__title{
+            font-size: 32px;
+            margin-bottom: 20px;
+            line-height: 42px;
+        }
+        &__supervised-container{
+            padding: 10px 20px;
+        }
+        &__supervised-by{
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        padding-top: 110px;
+        padding-bottom: 50px;
+
+        &__inner{
+            text-align: center;
+        }
+        &__description{
+            font-size: 16px;
+            color: $third;
+        }
+
+        &__title{
+            font-size: 36px;
+            margin-bottom: 20px;
+            line-height:48px;
+        }
+        &__supervised-container{
+            padding: 8px 16px;
+            max-width: 290px;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@use "sass:math";
+@use "_config.scss" as *;
+
+// Configuration
+@import "plugin/bootstrap-5.0.2/scss/functions";
+@import "plugin/bootstrap-5.0.2/scss/variables";
+@import "plugin/bootstrap-5.0.2/scss/mixins";
+@import "plugin/bootstrap-5.0.2/scss/utilities";
+
+// Layout & components
+@import "plugin/bootstrap-5.0.2/scss/containers";
+@import "plugin/bootstrap-5.0.2/scss/grid";
+@import "plugin/bootstrap-5.0.2/scss/transitions";
+@import "plugin/bootstrap-5.0.2/scss/nav";
+@import "plugin/bootstrap-5.0.2/scss/navbar";
+
+// Helpers
+@import "plugin/bootstrap-5.0.2/scss/helpers";
+
+// Utilities
+@import "plugin/bootstrap-5.0.2/scss/utilities/api";
+// scss-docs-end import-stack
+@import "plugin/_aos.scss";
+@import "base/_reset.scss";
+@import "layout/_navigation.scss";
+// @import "layout/_main.scss";
+@import "layout/_footer.scss";
+@import "layout/_section.scss";
+@import "components/_burgermenu.scss";
+@import "components/_preloader.scss";
+
+
+@media (min-width: 768px){
+	.container-md, 
+	.container-sm, 
+	.container {
+		max-width: 640px;
+	}
+}
+
+@media (min-width: 992px){
+	.container-lg, 
+	.container-md, 
+	.container-sm, 
+	.container {
+		max-width: 860px;
+	}
+}
+
+@media (min-width: 1200px){
+	.container-xl, 
+	.container-lg, 
+	.container-md, 
+	.container-sm, 
+	.container {
+		max-width: 1080px;
+	}
+}
+
+
+@media (min-width: 1400px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 80%;
+	}
+}
+
+.page-wrapper {
+	position: relative;
+	overflow-x: hidden;
+}
+
+

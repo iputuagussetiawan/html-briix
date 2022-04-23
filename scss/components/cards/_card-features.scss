@@ -1,0 +1,60 @@
+@use '../../config/_mixin.scss' as *;
+@use '../../config/_variable.scss' as *;
+
+.card-features{
+    @include imageRatio(26,26,true,contain);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px 22px;
+    border: 1px solid $gray-50;
+    border-radius: 8px;
+
+    &__info-container{
+        padding-left: 21px;
+    }
+    &__title{
+        margin-bottom: 0px;
+        font-size: 16px;
+        color: $black-200;
+        font-family:$primary-font;
+        font-weight: 500;
+    }
+
+    @media only screen and (max-width:1199.98px) {
+        padding: 8px 16px;
+        &__info-container{
+            padding-left: 16px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 16px 22px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__title{
+            color:$gray-100;
+        }
+    }
+}
+
+.features-list{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    @media only screen and (max-width: 1199.98px) {
+        gap: 18px;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+}
+

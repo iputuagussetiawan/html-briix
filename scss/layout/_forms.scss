@@ -1,0 +1,108 @@
+@use "../config/_variable.scss" as *;
+
+label {
+	font-weight: 400;
+
+	@media only screen and (max-width: 1199.98px) {
+		font-size: 15px;
+	}
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/*-----------------------------------------
+//////////////// FORM SETUP ///////////////
+-----------------------------------------*/
+.form-control-costum {
+	height: 39px;
+	width: 100%;
+	padding: 12px 24px;
+	border-radius: 8px;
+	box-sizing: border-box;
+	font-size: 14px;
+	transition: 0.4s ease;
+
+	&:focus {
+		border: 1px solid $primary;
+		box-shadow: none;
+		outline: none;
+	}
+}
+/*-----------------------------------------
+//////////////////////////////// FORM SETUP
+-----------------------------------------*/
+
+/*-----------------------------------------
+////////// SPINNER FORM SETUP /////////////
+-----------------------------------------*/
+.spinner {
+	&__btn-left,
+	&__btn-right {
+		width: 36px;
+		height: 36px;
+		border-radius: 36px !important;
+		background-color: $blue-100;
+		border: 1px solid $blue-100;
+		color: $white;
+		padding: 0px;
+		&:hover {
+			background-color: $blue-200;
+			border: 1px solid $blue-200;
+			color: $white;
+		}
+	}
+
+	&__btn-left {
+		margin-right: 16px;
+
+		&.dis {
+			background-color: $gray-100;
+			border-color: $gray-100;
+		}
+	}
+	&__btn-right {
+		margin-left: 16px !important;
+	}
+
+	&__input {
+		text-align: center;
+		height: 39px;
+		width: 100%;
+		padding: 12px 24px;
+		border-radius: 8px !important;
+		box-sizing: border-box;
+		font-size: 14px;
+		transition: 0.4s ease;
+		&:focus {
+			border: 1px solid $primary;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+
+	@media only screen and (max-width: 1199.98px) {
+		&__input {
+			border-radius: 4px !important;
+		}
+
+		&__btn-left {
+			margin-right: 12px !important;
+		}
+		&__btn-right {
+			margin-left: 12px !important;
+		}
+	}
+}
+/*-----------------------------------------
+//////////////////////// SPINNER FORM SETUP
+-----------------------------------------*/

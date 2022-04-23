@@ -1,0 +1,6 @@
+@use 'config/_variable.scss';
+@use 'config/_function.scss';
+@use 'config/_mixin.scss';
+@forward 'config/_variable.scss';
+@forward 'config/_function.scss';
+@forward 'config/_mixin.scss';

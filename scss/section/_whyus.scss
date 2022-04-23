@@ -1,0 +1,96 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+@use '../components/cards/_card-whyus.scss';
+
+.whyus{
+    @include imageRatio(993,443,true,contain,'vector-left');
+    @include imageRatio(838,342,true,contain,'vector-right');
+    margin:160px 0px;
+    position: relative;
+    background-color: $secondary;
+    color:$white;
+
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: calc(100% - 2px);
+        left: 0px;
+        height: 170px;
+        background-image: url('https://preview.timedoor-host.my.id/briix-lp/images/background/bg-top.svg');
+        background-size: cover;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: calc(100% - 2px);
+        right: 0;
+        left: 0px;
+        height: 170px;
+        background-image: url('https://preview.timedoor-host.my.id/briix-lp/images/background/bg-bottom.svg');
+        background-size: cover;
+    }
+
+    &__vector-left-container,
+    &__vector-right-container{
+        position: absolute;
+    }
+    &__vector-left-container{
+        top: -100px;
+        left: -288px;
+    }
+    &__vector-right-container{
+        top: 0;
+        right: -295px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        margin:120px 0px;
+        &::before{
+            height: 135px;
+        }
+    
+        &::after{
+            height: 135px;
+        }
+    
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        margin:100px 0px;
+        &::before{
+            height: 105px;
+        }
+    
+        &::after{
+            height: 105px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        margin:64px 0px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        margin:42px 0px;
+        &::after{
+            height: 72px;
+        }
+        .section-padding{
+            padding-top: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &::before{
+            height: 64px;
+        }
+    
+        &::after{
+            height: 48px;
+        }
+    }
+
+    
+}

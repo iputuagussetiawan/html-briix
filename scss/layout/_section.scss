@@ -1,0 +1,94 @@
+@use "../config/_variable.scss" as *;
+
+:root {
+	--section-padding: 100px;
+	--margin-bottom-title-wrapper: 48px;
+	--font-size-section-title: 40px;
+	--line-height-section-title: 48.41px;
+	--font-size-section-title-description: 20px;
+	--margin-bottom-section-title: 16px;
+
+}
+
+@media only screen and (max-width: 1199.98px) {
+	:root {
+		--section-padding: 80px;
+		--font-size-section-title: 37px;
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	:root {
+		--margin-bottom-title-wrapper: 32px;
+		--font-size-section-title: 32px;
+		--section-padding: 64px;
+		--line-height-section-title:42px;
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	:root {
+		--font-size-section-title: 24px;
+		--font-size-section-title-description: 16px;
+		--section-padding: 42px;
+		--line-height-section-title:29.05px;
+	}
+}
+
+/*-----------------------------------------
+//////////// SECTION PADDING //////////////
+-----------------------------------------*/
+.section-padding {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	&--bottom {
+		@extend .section-padding;
+		padding-top: 0px;
+		padding-bottom: var(--section-padding);
+	}
+
+	&--top {
+		@extend .section-padding;
+		padding-top: var(--section-padding);
+		padding-bottom: 0px;
+	}
+}
+/*-----------------------------------------
+/////////////////////// SECTION PADDING END
+-----------------------------------------*/
+
+/*-----------------------------------------
+////////////// SECTION TITLE //////////////
+-----------------------------------------*/
+.section-title-wrapper {
+	position: relative;
+	margin-bottom: var(--margin-bottom-title-wrapper);
+	z-index: 10;
+}
+.section-title {
+	position: relative;
+	margin-bottom: var(--margin-bottom-section-title);
+	font-family: $primary-font;
+	font-size: var(--font-size-section-title);
+	line-height:var(--line-height-section-title);
+	font-weight: 700;
+	color: $black-300;
+	z-index: 5;
+}
+.section-subtitle {
+	margin-bottom: 16px;
+	font-family: $secondary-font;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 5.4px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+.section-description{
+	font-size: var(--font-size-section-title-description);
+	font-weight: 500;
+}
+/*-----------------------------------------
+///////////////////////// SECTION TITLE END
+-----------------------------------------*/

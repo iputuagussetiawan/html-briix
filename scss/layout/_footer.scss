@@ -1,0 +1,102 @@
+@use "../config/_variable.scss" as *;
+@use "../config/_mixin.scss" as *;
+@use "../components/_social-icons.scss";
+/*-----------------------------------------
+////////////////// FOOTER /////////////////
+-----------------------------------------*/
+.footer {
+	@include imageRatio(81.88, 40, true, cover, "logo");
+	margin-top: 40px;
+	position: relative;
+	background-color: $secondary;
+
+	&::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom:calc(100% - 2px);
+        left: 0px;
+        height: 160px;
+        background-image: url('https://preview.timedoor-host.my.id/briix-lp/images/background/bg-top.svg');
+        background-size: cover;
+    }
+
+	&__logo-container{
+		margin-bottom: 24px;
+	}
+
+	&__info-container{
+		margin-bottom: 40px;
+		color: $white;
+		p{
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 21px;
+			letter-spacing: 0.5px;
+		}
+	}
+
+	&__appstore-label{
+		display: inline-block;
+		margin-right: 48px;
+		color: $white;
+		font-family: $primary-font;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 0.15px;
+	}
+
+	&__appstorelogo-container{
+		display: inline-block;
+		margin-right: 16px;
+		vertical-align: middle;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+
+	&__copyright{
+		margin-top: 40px;
+		padding: 6px 0px;
+		background-color: $blue-200;
+		color: $white;
+		text-align: center;
+		p{
+			margin: 0px;
+			font-family: $secondary-font;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 20px;
+			letter-spacing: 0.4px;
+		}
+	}
+
+	@media only screen and (max-width: 1199.98px) {
+		&__appstore-label{
+			display: block;
+			margin-right: 0px;
+		}
+		&__appstore-label{
+			margin-bottom: 16px;
+		}
+	}
+
+	@media only screen and (max-width: 991.98px) {
+		&__logo-container{
+			margin-bottom: 16px;
+		}
+
+		&__info-container,
+		&__appstore-container{
+			margin-bottom: 50px;
+		}	
+	}
+	
+}
+
+/*-----------------------------------------
+//////////////////////////////// FOOTER END
+-----------------------------------------*/

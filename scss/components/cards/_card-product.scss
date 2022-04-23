@@ -1,0 +1,100 @@
+@use '../../config/_mixin.scss' as *;
+@use '../../config/_variable.scss' as *;
+
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    @media only screen and (max-width: 767.98px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-product{
+    @include imageRatio(184,184,true,contain);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -35px;
+            bottom: 0;
+            width: 1px;
+            background-color: $gray-50;
+        }
+    }
+
+    &__info-container{
+        order: 0;
+        padding-right: 32px;
+    }
+    &__image-container{
+        order: 1;
+    }
+    &__title{
+        margin-bottom: 10px;
+        font-family:$secondary-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33.6px;
+        color: $black;
+    }
+
+    &__description{
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+    }
+
+    &__image-container{
+        min-width: 184px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+        &__description{
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width:1199.98px) {
+        flex-direction: column;
+        &__info-container{
+            order: 1;
+            padding-right: 0px;
+        }
+        &__image-container{
+            order: 0;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+
+        &__title{
+            font-size: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &:nth-child(1) {
+            &::before{
+                content: '';
+                position: absolute;
+                top: unset;
+                right: 0px;
+                bottom: -35px;
+                width: 100%;
+                height: 1px;
+                background-color: $gray-50;
+            }
+        }
+    }
+}
+

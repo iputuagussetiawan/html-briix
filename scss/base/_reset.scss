@@ -1,0 +1,53 @@
+@use "../_config.scss" as *;
+@use '../config/variable' as *;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	position: relative;
+	color:$gray-100;
+	font-family: $primary-font;
+	font-weight: 300;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	background: $secondary;
+}
+
+::-moz-selection {
+	background-color: $secondary;
+	color: $white;
+}
+
+::selection {
+	background-color: $secondary;
+	color: $white;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: $black-200;
+	transition: 0.4s ease;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $primary;
+	}
+}
